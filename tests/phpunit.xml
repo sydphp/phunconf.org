@@ -3,7 +3,7 @@
 <phpunit>
     <testsuites>
         <testsuite name="Phunconf functionality tests">
-            <directory>./Phunconf/</directory>
+            <directory>./PhunconfTests/</directory>
         </testsuite>
     </testsuites>
 </phpunit>
