@@ -91,12 +91,15 @@
 
 <!-- Services Section -->
 <section id="about">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">About</h2>
 
                 <p>Phunconference (or known more affectionately as phunconf) is a relatively informal conference where attendees choose the topics for discussion. With two or three concurrent sessions running at any one time, there will be a wide range of topics available, and something to interest everyone. Essentially it provides everyone with a chance to learn and share in a relaxed environment along with the opportunity to chat with people in a great atmosphere.</p>
+
+                <p>Phunconf is brought to you by the organisers of SydPHP.  Members meet monthly (or whenever really) to discuss all things PHP.</p>
 
             </div>
         </div>
@@ -224,7 +227,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Putting the PHP in Phunconf past</h2>
+                <h2 class="section-heading">Putting the PHPun in Phunconf past</h2>
                 <h3 class="section-subheading text-muted">Phunconf started in 2010 as an end of year celebration for SydPHP.  Here's what some of our members have had to say.</h3>
             </div>
         </div>
