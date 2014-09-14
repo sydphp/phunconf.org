@@ -1,0 +1,28 @@
+{
+    "name":"sydphp/phunconf.org",
+    "description":"SydPHP's annual phunconf.",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors":[
+        {
+            "name": "Jack Skinner",
+            "email": "sydnerdrage@gmail.com",
+            "homepage": "http://sydnerdrage.com",
+            "role": "Organiser & Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.5"
+    },
+    "require-dev": {
+        "behat/behat": "2.4.*@stable",
+        "behat/mink": "1.4.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "phpunit/phpunit": "~4.2.1"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
