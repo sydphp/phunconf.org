@@ -52,13 +52,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                    <a href="#page-top">Home</a>
-                </li>
                 <li>
                     <a class="page-scroll" href="#about">About</a>
                 </li>
-                <?php /**
+                <?php /*
                 <li>
                     <a class="page-scroll" href="#events">Events</a>
                 </li>
@@ -66,7 +63,7 @@
                 <li>
                     <a class="page-scroll" href="#history">Past</a>
                 </li>
-                <?php /**
+                <?php /*
                 <li>
                     <a class="page-scroll" href="#team">Team</a>
                 </li>
@@ -123,7 +120,7 @@
         </div>
     </div>
 </section>
-<?php /**
+<?php /*
 <!-- Portfolio Grid Section -->
 <section id="portfolio" class="bg-light-gray">
     <div class="container">
@@ -301,7 +298,7 @@
         </div>
     </div>
 </section>
-
+<?php /*
 <!-- Team Section -->
 <section id="team" class="bg-light-gray">
     <div class="container">
@@ -409,7 +406,7 @@
         </div>
     </div>
 </section>
-
+*/ ?>
 <footer>
     <div class="container">
         <div class="row">
@@ -420,14 +417,6 @@
                 <ul class="list-inline social-buttons">
                     <li><a href="http://www.twitter.com/sydphp"><i class="fa fa-twitter"></i></a>
                     </li>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline quicklinks">
-                    <li><a href="#">Privacy Policy</a>
-                    </li>
-                    <li><a href="#">Terms of Use</a>
                     </li>
                 </ul>
             </div>
