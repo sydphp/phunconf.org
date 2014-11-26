@@ -83,7 +83,7 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-lead-in">PHUNCONF</div>
-            <div class="intro-heading">Sydney's Annual Phunconf</div>
+            <div class="intro-heading">Sydney's Annual PHP Unconference</div>
             <a href="#about" class="page-scroll btn btn-xl">Tell Me More</a>
         </div>
     </div>
