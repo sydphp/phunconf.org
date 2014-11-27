@@ -1,0 +1,14 @@
+language: php
+php:
+- 5.6
+- 5.5
+- 5.4
+script:
+- phpunit -c tests/phpunit.xml
+deploy:
+  provider: heroku
+  api_key:
+    secure: cpvahDTFLVYNgCRdJUq2NiMNJffR6Xp0td2blr6KbymPElAJ5D/rm0CJ/LUqQ7azL4jUy4lBo10Ox4HxMC0ZEF0H+IYlBx5r7Yo6VnqH3ryv9lk6tZonnb+wscDvwHXnA/WfwfcK4w7Mt1ZCVJZ8bQ+Nq9gcStsHWLcBuTpzbMU=
+  app: phunconf-org
+  on:
+    repo: sydphp/phunconf.org
