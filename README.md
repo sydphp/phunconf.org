@@ -1,6 +1,8 @@
 # PHUNCONF
 ## The code behind _phunconf_
 
+[![Heroku](https://heroku-badge.herokuapp.com/?app=phunconf-org)]
+
 ## Requirements
  - PHP 5.5+
  - cURL (for installation)
