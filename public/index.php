@@ -83,7 +83,7 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-lead-in">PHUNCONF</div>
-            <div class="intro-heading">Sydney's Annual Phunconf</div>
+            <div class="intro-heading">Sydney's Annual PHP Unconference</div>
             <a href="#about" class="page-scroll btn btn-xl">Tell Me More</a>
         </div>
     </div>
@@ -227,7 +227,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Putting the PHPun in Phunconf past</h2>
+                <h2 class="section-heading">Putting the PHun in past Phunconfs!</h2>
                 <h3 class="section-subheading text-muted">Phunconf started in 2010 as an end of year celebration for SydPHP.  Here's what some of our members have had to say.</h3>
             </div>
         </div>
