@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home | PHP South Coast Conference 2015</title>
+    <title>Home | SydPHP Phunconference</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Join us for the 5th Annual SydPHP Phunconference on 5th February 2015">
     <meta name="keywords" content="PHP, Phunconference, Sydney, Australia, SydPHP, Unconference, Workshops" />
