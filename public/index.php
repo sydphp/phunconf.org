@@ -56,7 +56,7 @@
                 <h2>5th Feb 2015</h2>
                 <span class="byline">5th Annual SydPHP Phunconference</span>
             </header>
-            <a href="https://phunconf5.eventbrite.com.au" class="button">Book&nbsp;now</a>
+            <a href="https://phunconf5.eventbrite.com.au" target="_blank" class="button">Book&nbsp;now</a>
         </section>
     </div>
 </div>
