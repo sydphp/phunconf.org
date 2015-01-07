@@ -167,7 +167,7 @@
 
         <!-- Copyright -->
         <div class="copyright">
-            &copy; SydPHP Phunconference. This website is on <a href="https://github.com/sydphp/phunconference.org">GitHub</a>
+            &copy; SydPHP Phunconference. This website is on <a href="https://github.com/sydphp/phunconf.org">GitHub</a>
         </div>
 
     </div>
