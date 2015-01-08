@@ -37,7 +37,7 @@
         <nav id="nav">
             <ul>
                 <li class="current_page_item"><a href="/">Home</a></li>
-                <li><a href="/sponsors/">Sponsors</a></li>
+                <li><a href="/sponsors.php">Sponsors</a></li>
                 <li><a href="/information/">Information</a></li>
                 <li><a href="/code-of-conduct/">Code of Conduct</a></li>
             </ul>
