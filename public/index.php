@@ -30,7 +30,7 @@
 
         <!-- Logo -->
         <div id="logo">
-            <h1>SydPHP Phunconference 5.0<a href="/"></a></h1>
+            <h1><span class="brand">Syd<span class="php">PHP</span></span> <a href="/" class=""><span class="phunconf">Phunconference</span> <span class="version">5.0</span></a></h1>
         </div>
 
         <!-- Nav -->
@@ -54,7 +54,7 @@
         <section>
             <header>
                 <h2>5th Feb 2015</h2>
-                <span class="byline">5th Annual SydPHP Phunconference</span>
+                <span class="byline">5th Annual <span class="brand" >Syd<span class="php">PHP</span></span> <span class="phunconf">Phunconference</span></span>
             </header>
             <a href="https://phunconf5.eventbrite.com.au" target="_blank" class="button">Book&nbsp;now</a>
         </section>
@@ -108,50 +108,36 @@
     </div>
 </div>
 
-<!-- Main -->
-<div id="main">
-    <div class="container">
-        <div class="row">
-
-        <section>
-
-            <h3>Phunconf is run for the benefit of the Sydney PHP community by SydPHP organisers:</h3>
-
-
-            <div class="content">
-                <p><a href="http://www.meetup.com/SydPHP/members/49626422/">Dave Clark</a></p>
-                <a href="http://www.meetup.com/SydPHP/members/49626422/">
-                    <img class="team" src="/img/team/dave.jpg" alt="Dave Clark profile" />
-                </a>
+ <!-- Main -->
+            <div id="main">
+                <div class="container"><!-- Row #1 -->
+                    <!-- <div class="row"> -->
+                        <section>
+                            <h3>Phunconf is run for the benefit of the Sydney PHP community by SydPHP organisers:</h3>
+                            <ul class="featured">
+                                <li><p><a href="http://www.meetup.com/SydPHP/members/49626422/">Dave Clark</a></p>
+                                    <a href="http://www.meetup.com/SydPHP/members/49626422/">
+                                    <img class="team" src="/img/team/dave.jpg" alt="Dave Clark profile"/>
+                                    </a>
+                                </li>
+                                <li><p><a href="http://www.meetup.com/SydPHP/members/32702732/">Jack Skinner</a></p>
+                                    <a href="http://www.meetup.com/SydPHP/members/32702732/">
+                                    <img class="team" src="/img/team/jack.jpg" alt="Jack Skinner profile"/>
+                                </a></li>
+                                <li><p><a href="http://www.meetup.com/SydPHP/members/13462493/">Dean Rather</a></p>
+                                    <a href="http://www.meetup.com/SydPHP/members/13462493/">
+                                    <img class="team" src="/img/team/dean.jpg" alt="Dean Rather profile"/>
+                                </a></li>
+                                <li><p><a href="http://www.meetup.com/SydPHP/members/49008392/">Justin King</a></p>
+                                    <a href="http://www.meetup.com/SydPHP/members/49008392/">
+                                    <img class="team" src="/img/team/justin.jpg" alt="Justin King profile"/>
+                                </a>
+                                </li>
+                            </ul>
+                        <section>
+                   <!--  </div> -->
+                </div>
             </div>
-
-            <div class="content">
-                <p><a href="http://www.meetup.com/SydPHP/members/32702732/">Jack Skinner</a></p>
-                <a href="http://www.meetup.com/SydPHP/members/32702732/">
-                    <img class="team" src="/img/team/jack.jpg" alt="Jack Skinner profile" />
-                </a>
-            </div>
-
-            <div class="content">
-                <p><a href="http://www.meetup.com/SydPHP/members/13462493/">Dean Rather</a></p>
-                <a href="http://www.meetup.com/SydPHP/members/13462493/">
-                    <img class="team" src="/img/team/dean.jpg" alt="Dean Rather profile" />
-                </a>
-            </div>
-
-            <div class="content">
-                <p><a href="http://www.meetup.com/SydPHP/members/49008392/">Justin King</a></p>
-                <a href="http://www.meetup.com/SydPHP/members/49008392/">
-                    <img class="team" src="/img/team/justin.jpg" alt="Justin King profile" />
-                </a>
-            </div>
-
-        </section>
-
-
-        </div>
-    </div>
-</div>
 
 
 <!-- Footer -->
@@ -167,7 +153,7 @@
 
         <!-- Copyright -->
         <div class="copyright">
-            &copy; SydPHP Phunconference. This website is on <a href="https://github.com/sydphp/phunconf.org">GitHub</a>
+         &copy; <span class="brand" >Syd<span class="php">PHP</span></span> <span class="phunconf">Phunconference</span>. This website is on <a href="https://github.com/sydphp/phunconf.org">GitHub</a>
         </div>
 
     </div>

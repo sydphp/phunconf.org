@@ -2,6 +2,42 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100');
 @import url('font-awesome.min.css');
 
+@font-face {
+    font-family: 'HandelGothicRegular';
+    src: url('../fonts/handelgothic/handelgothic-webfont.eot');
+    src: url('../fonts/handelgothic/handelgothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/handelgothic/handelgothic-webfont.woff') format('woff'),
+         url('../fonts/handelgothic/handelgothic-webfont.ttf') format('truetype'),
+         url('../fonts/handelgothic/handelgothic-webfont.svg#HandelGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.brand {
+    font-family: 'HandelGothicRegular';
+    font-weight: bold;
+}
+.brand .php {
+    color: #29ABE2;
+}
+
+.phunconf {
+    font-family: 'Oswald', sans-serif;
+}
+.version {
+    font-family: 'Anton', sans-serif;
+}
+/*
+
+font-family: 'Anton', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Oswald', sans-serif;
+
+ */
+
 /*
 	Concentric by Pixelarity
 	pixelarity.com @pixelarity
@@ -52,6 +88,8 @@ em, i
 a
 {
     color: #7C9CD0;
+    text-decoration: none;
+
 }
 
 sub
@@ -657,7 +695,7 @@ table.default tbody
 
 #logo a
 {
-    display: block;
+    /*display: block;*/
     letter-spacing: 1px;
     font-size: 1.25em;
     font-weight: 300;
@@ -991,7 +1029,7 @@ table.default tbody
 {
     line-height: 1.8em;
     font-size: 1.1em;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .homepage #intro header
@@ -1035,8 +1073,8 @@ table.default tbody
 
 .team
 {
-    float: left;
-    margin-right: 2em;
+    /*float: left;
+    margin-right: 2em;*/
     margin-bottom: 1em;
     margin-left: 1em;
 }
