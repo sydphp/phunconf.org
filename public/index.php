@@ -2,7 +2,8 @@
 define('DS', DIRECTORY_SEPARATOR);
 define('PAGES_DIR', '../pages');
 
-
+// Page Varibles - these are overwritten in templates/pages.
+$bodyClass = '';
 
 $pageTemplate = PAGES_DIR.DS.$_SERVER['REQUEST_URI'].'.phtml';
 
@@ -50,7 +51,7 @@ $content = ob_get_clean();
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
-<body class="homepage">
+<body class="<?=$bodyClass;?>">
 
 <!-- Header -->
 <div id="header">
