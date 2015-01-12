@@ -1408,3 +1408,44 @@ body.codeOfConduct #intro
     marginL 10px;
 }
 
+
+
+@media (max-width:1720px) {
+
+    #nav
+    {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    #nav > ul
+    {
+        text-align: center;
+    }
+
+    #nav > ul > li
+    {
+        float: none;
+        display: inline-block;
+    }
+
+    #nav > ul > li:last-child
+    {
+        padding-right: 0;
+    }
+
+    #nav > ul > li > a,
+    #nav > ul > li > span
+    {
+        display: block;
+        margin-left: 0.7em;
+        padding: 0.20em 1.2em;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 0.90em;
+        outline: 0;
+        color: #FFF;
+    }
+}
