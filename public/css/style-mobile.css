@@ -382,3 +382,8 @@ ul.social
 {
     margin: 0 !important;
 }
+
+
+.no-mobile {
+    display: block;
+}
