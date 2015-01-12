@@ -1,16 +1,25 @@
 <?php
+
+// http://gonzalo123.com/2012/10/15/how-to-rewrite-urls-with-php-5-4s-built-in-web-server/
+if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
+    return false;
+}
+
+$route = str_replace('?'.$_SERVER['QUERY_STRING'],'', $_SERVER['REQUEST_URI']);
+$route = str_replace($_SERVER['SCRIPT_NAME'], '', $route);
+
 define('DS', DIRECTORY_SEPARATOR);
 define('PAGES_DIR', '../pages');
 define('TICKETS_ON_SALE', array_key_exists('TICKETS', $_GET) || time() > strtotime('1:30pm 13 January 2015'));
-    
+
 if(array_key_exists('DEBUG', $_GET)) { $v = "_{$_GET['DEBUG']}"; echo "<!--".print_r($$v, true)." -->";}
 
 // Page Variables - these are overwritten in templates/pages.
 $bodyClass = '';
 
-$pageTemplate = PAGES_DIR.DS.$_SERVER['PATH_INFO'].'.phtml';
+$pageTemplate = PAGES_DIR.DS.$route.'.phtml';
 
-if( $_SERVER['REQUEST_URI'] == '/') {
+if( $route == '/') {
     $pageTemplate = PAGES_DIR.DS.'index'.'.phtml';
 }
 
