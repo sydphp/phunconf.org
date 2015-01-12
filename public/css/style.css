@@ -779,6 +779,11 @@ table.default tbody
     -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
+#nav > ul > li > a > strong {
+    color: #ccc;
+    font-weight: bold;
+    border-radius: 5px;
+}
 
 #nav li.active:hover > a,
 #nav li.active:hover > span

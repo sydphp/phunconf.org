@@ -1,11 +1,12 @@
 <?php
 define('DS', DIRECTORY_SEPARATOR);
 define('PAGES_DIR', '../pages');
+define('TICKETS_ON_SALE', array_key_exists('TICKETS', $_GET) || time() > strtotime('1:30pm 13 January 2015'));
 
 // Page Varibles - these are overwritten in templates/pages.
 $bodyClass = '';
 
-$pageTemplate = PAGES_DIR.DS.$_SERVER['REQUEST_URI'].'.phtml';
+$pageTemplate = PAGES_DIR.DS.$_SERVER['PATH_INFO'].'.phtml';
 
 if( $_SERVER['REQUEST_URI'] == '/') {
     $pageTemplate = PAGES_DIR.DS.'index'.'.phtml';
@@ -16,10 +17,14 @@ if(!is_readable($pageTemplate)) {
     http_response_code(404);
 }
 
+$ticketsLabel = (TICKETS_ON_SALE ? '<strong>Tickets!</strong>' : 'Tickets');
+
 $navigation = [
     'Home' => '',
     'What\'s On' => 'whats-on',
     //'Sponsors' => 'sponsors',
+    'Schedule' => 'schedule',
+    $ticketsLabel => 'tickets',
     'Code of Conduct' => 'code-of-conduct',
 ];
 
@@ -70,6 +75,7 @@ $content = ob_get_clean();
             <ul>
                 <?php
                 foreach($navigation as $name => $slug) {
+                    if(is_null($slug)) { continue; }
                     $class = ('/'.$slug == $_SERVER['REQUEST_URI'] ? 'current_page_item' : '');
                     ?><li class="<?=$class;?>"><a href="/<?=$slug;?>"><?=$name;?></a></li><?php
                 }
