@@ -17,12 +17,14 @@ if(!is_readable($pageTemplate)) {
     http_response_code(404);
 }
 
+$ticketsLabel = (TICKETS_ON_SALE ? '<strong>Tickets!</strong>' : 'Tickets');
+
 $navigation = [
     'Home' => '',
     'What\'s On' => 'whats-on',
     //'Sponsors' => 'sponsors',
     'Schedule' => 'schedule',
-    '<strong>Tickets!</strong>' => (TICKETS_ON_SALE ? 'tickets' : null),
+    $ticketsLabel => 'tickets',
     'Code of Conduct' => 'code-of-conduct',
 ];
 
