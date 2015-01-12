@@ -20,6 +20,8 @@ $navigation = [
     'Home' => '',
     'What\'s On' => 'whats-on',
     //'Sponsors' => 'sponsors',
+    'Schedule' => 'schedule',
+    '<strong>Tickets!</strong>' => (time() > strtotime('1:30pm 13 January 2015') ? null : 'tickets' ),
     'Code of Conduct' => 'code-of-conduct',
 ];
 
@@ -70,6 +72,7 @@ $content = ob_get_clean();
             <ul>
                 <?php
                 foreach($navigation as $name => $slug) {
+                    if(is_null($slug)) { continue; }
                     $class = ('/'.$slug == $_SERVER['REQUEST_URI'] ? 'current_page_item' : '');
                     ?><li class="<?=$class;?>"><a href="/<?=$slug;?>"><?=$name;?></a></li><?php
                 }
