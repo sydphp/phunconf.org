@@ -7,6 +7,9 @@ deploy:
   provider: heroku
   api_key:
     secure: fcD8opNWDFTfviZ2unS7hOZqKywEn/Bis1ARFilP/3J8ErP1RkJebvBkIv93PQBEWXkfi6LVBgsl5LgTTRCk+IRT3yt68nhtbuINGSdofkq58/KnS+w32tK5DtLlxOeZ1QMwe/c13k33zti75aFV5UC8dY4RN2mmi1PdVS3Iuc0=
-  app: phunconf-org
+  app:
+    master: phunconf-org
+    development: development-phunconf-org
   on:
     repo: sydphp/phunconf.org
+

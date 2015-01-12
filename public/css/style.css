@@ -270,7 +270,7 @@ ul.featured
 ul.featured li
 {
     display: inline-block;
-    width: 22%;
+    width: 16%;
     margin: 0 2.5% 5% 0;
     padding: 0em 0.50em;
     vertical-align: top;
@@ -1344,6 +1344,7 @@ body.codeOfConduct #intro
     height: 120px;
 }
 
+
 #schedule {
     border-collapse: separate;
     border-spacing: 10px 10px;
@@ -1406,3 +1407,4 @@ body.codeOfConduct #intro
     padding: 10px;
     marginL 10px;
 }
+
