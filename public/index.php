@@ -1,12 +1,12 @@
 <?php
 define('DS', DIRECTORY_SEPARATOR);
 define('PAGES_DIR', '../pages');
-define('TICKETS_ON_SALE', time() < strtotime('1:30pm 13 January 2015'));
+define('TICKETS_ON_SALE', $_GET['TICKETS'] || time() > strtotime('1:30pm 13 January 2015'));
 
 // Page Varibles - these are overwritten in templates/pages.
 $bodyClass = '';
 
-$pageTemplate = PAGES_DIR.DS.$_SERVER['REQUEST_URI'].'.phtml';
+$pageTemplate = PAGES_DIR.DS.$_SERVER['PATH_INFO'].'.phtml';
 
 if( $_SERVER['REQUEST_URI'] == '/') {
     $pageTemplate = PAGES_DIR.DS.'index'.'.phtml';
