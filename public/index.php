@@ -1,6 +1,7 @@
 <?php
 define('DS', DIRECTORY_SEPARATOR);
 define('PAGES_DIR', '../pages');
+define('TICKETS_ON_SALE', time() < strtotime('1:30pm 13 January 2015'));
 
 // Page Varibles - these are overwritten in templates/pages.
 $bodyClass = '';
@@ -21,7 +22,7 @@ $navigation = [
     'What\'s On' => 'whats-on',
     //'Sponsors' => 'sponsors',
     'Schedule' => 'schedule',
-    '<strong>Tickets!</strong>' => (time() > strtotime('1:30pm 13 January 2015') ? null : 'tickets' ),
+    '<strong>Tickets!</strong>' => (TICKETS_ON_SALE ? 'tickets' : null),
     'Code of Conduct' => 'code-of-conduct',
 ];
 
