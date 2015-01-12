@@ -19,6 +19,7 @@ if(!is_readable($pageTemplate)) {
 $navigation = [
     'Home' => '',
     'What\'s On' => 'whats-on',
+    'Schedule' => 'schedule',
     //'Sponsors' => 'sponsors',
     'Code of Conduct' => 'code-of-conduct',
 ];
