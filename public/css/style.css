@@ -36,7 +36,7 @@
     font-weight: bold;
     color: #efbd32;
     text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 #logo {
@@ -1343,3 +1343,68 @@ body.codeOfConduct #intro
 #buyNow {
     height: 120px;
 }
+
+
+#schedule {
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+}
+
+#schedule h2 {
+    font-size: 1.6em;
+}
+
+#schedule td {
+    padding: 4px;
+    margin: 2px;
+}
+#schedule tr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#schedule td.schedule-time {
+    width: 5em;
+}
+
+#schedule .combined-track {
+    background-color: rgba(128, 128, 128, 0.30);
+    text-align: center;
+    font-weight: bold;
+}
+
+#schedule .workshop-track {
+    width: 50%;
+}
+
+#schedule .retreat-track {
+    width: 50%;
+}
+
+#schedule .phunconf-track {
+    border: 2px solid #EFBD32;
+    height: 5em;
+    text-align:center;
+    padding: 10px;
+    vertical-align:  middle;
+}
+
+#schedule .social-track {
+}
+
+#schedule p
+{
+    font-size: 0.7em;
+}
+
+
+.no-mobile {
+    display: none;
+}
+
+.warning {
+    border: 2px solid  #BC2818;
+    padding: 10px;
+    marginL 10px;
+}
+

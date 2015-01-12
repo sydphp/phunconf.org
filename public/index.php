@@ -22,9 +22,8 @@ $ticketsLabel = (TICKETS_ON_SALE ? '<strong>Tickets!</strong>' : 'Tickets');
 $navigation = [
     'Home' => '',
     'What\'s On' => 'whats-on',
-    //'Sponsors' => 'sponsors',
     'Schedule' => 'schedule',
-    $ticketsLabel => 'tickets',
+    '<strong>Tickets!</strong>' => (time() > strtotime('1:30pm 13 January 2015') ? null : 'tickets' ),
     'Code of Conduct' => 'code-of-conduct',
 ];
 
