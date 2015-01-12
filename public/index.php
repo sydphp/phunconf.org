@@ -49,7 +49,6 @@ $content = ob_get_clean();
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/style-wide.css" />
     </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
 <body class="<?=$bodyClass;?>">
 
