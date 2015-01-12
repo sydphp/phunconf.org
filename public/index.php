@@ -58,7 +58,11 @@ $content = ob_get_clean();
 
         <!-- Logo -->
         <div id="logo">
-            <h1><span class="brand">Syd<span class="php">PHP</span></span> <a href="/" class=""><span class="phunconf">Phunconference</span> <span class="version">5.0</span></a></h1>
+            <h1>
+                <a href="/" class="">
+                    <span class="phunconf">phunconf</span> <span class="version">5.0</span>
+                </a>
+            </h1>
         </div>
 
         <!-- Nav -->
