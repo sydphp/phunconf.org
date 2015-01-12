@@ -12,7 +12,6 @@ define('DS', DIRECTORY_SEPARATOR);
 define('PAGES_DIR', '../pages');
 define('TICKETS_ON_SALE', array_key_exists('TICKETS', $_GET) || time() > strtotime('1:30pm 13 January 2015'));
 
-if(array_key_exists('DEBUG', $_GET)) { $v = "_{$_GET['DEBUG']}"; echo "<!--".print_r($$v, true)." -->";}
 
 // Page Variables - these are overwritten in templates/pages.
 $bodyClass = '';
