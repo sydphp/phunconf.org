@@ -6,7 +6,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: cpvahDTFLVYNgCRdJUq2NiMNJffR6Xp0td2blr6KbymPElAJ5D/rm0CJ/LUqQ7azL4jUy4lBo10Ox4HxMC0ZEF0H+IYlBx5r7Yo6VnqH3ryv9lk6tZonnb+wscDvwHXnA/WfwfcK4w7Mt1ZCVJZ8bQ+Nq9gcStsHWLcBuTpzbMU=
+    secure: fcD8opNWDFTfviZ2unS7hOZqKywEn/Bis1ARFilP/3J8ErP1RkJebvBkIv93PQBEWXkfi6LVBgsl5LgTTRCk+IRT3yt68nhtbuINGSdofkq58/KnS+w32tK5DtLlxOeZ1QMwe/c13k33zti75aFV5UC8dY4RN2mmi1PdVS3Iuc0=
   app: phunconf-org
   on:
     repo: sydphp/phunconf.org
