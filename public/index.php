@@ -18,8 +18,8 @@ if(!is_readable($pageTemplate)) {
 
 $navigation = [
     'Home' => '',
-    'Sponsors' => 'sponsors',
-    'Information' => 'information',
+    'What\'s On' => 'whats-on',
+    //'Sponsors' => 'sponsors',
     'Code of Conduct' => 'code-of-conduct',
 ];
 
