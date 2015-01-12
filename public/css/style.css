@@ -187,6 +187,10 @@ article:last-child
 {
     display: inline-block;
 }
+.image.tall {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
 .image img
 {
@@ -1015,16 +1019,15 @@ table.default tbody
 
 .homepage #intro
 {
-    background: #F2F1F1;
-    color: #43485E;
+
 }
 
 #intro
 {
     position: relative;
     padding: 5em 0em 4em 0em;
-    background: #43485e;
-    color: #ffcf06;
+    background: #F2F1F1;
+    color: #43485E;
 }
 
 #intro p
@@ -1041,7 +1044,7 @@ table.default tbody
 
 #intro header
 {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 .homepage #intro header h2
@@ -1053,6 +1056,12 @@ table.default tbody
 #intro header h2
 {
     color: #ffcf06;
+}
+#intro header h1 {
+    font-size: 2em;
+}
+#intro header h3 {
+    font-size: 1.7em;
 }
 
 #intro .content
