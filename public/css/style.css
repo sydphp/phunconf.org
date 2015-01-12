@@ -1,5 +1,7 @@
 @charset 'UTF-8';
 @import url('http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100');
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Anton);
 @import url('font-awesome.min.css');
 
 @font-face {
@@ -25,9 +27,27 @@
 
 .phunconf {
     font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #188BBC;
+    text-transform: uppercase;
 }
 .version {
     font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color: #efbd32;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 9em;
+    display: block;
+}
+
+#logo .phunconf {
+    color: white;
 }
 /*
 
@@ -888,7 +908,7 @@ table.default tbody
 #banner header .byline
 {
     margin-top: 0.50em;
-    font-size: 1.5em;
+    font-size: 3em;
     font-weight: 300;
 }
 #banner header .byline strong
