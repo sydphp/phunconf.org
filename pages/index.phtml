@@ -3,6 +3,10 @@ $bodyClass = 'homepage';
 ?>
 <!-- Banner -->
 
+<script src="/js/jquery.plugin.min.js"></script>
+<script src="/js/jquery.countdown.min.js"></script>
+<link rel="stylesheet" href="/css/jquery.countdown.css" />
+
 <div id="banner">
     <div class="container">
         <section>
@@ -10,7 +14,48 @@ $bodyClass = 'homepage';
                 <h2>5th Feb 2015</h2>
                 <span class="byline">5th Annual <span class="brand" >Syd<span class="php">PHP</span></span> <span class="phunconf">Phunconference</span></span>
             </header>
-            <a href="https://phunconf5.eventbrite.com.au" target="_blank" class="button">Book&nbsp;now</a>
+
+            <div id="buyNow">
+                <div class="container"></div>
+            </div>
+
+            <script type="text/javascript" language="javascript">
+            //var ticketOnSaleTime = new Date((new Date()).getTime() + 1000*3); //  retain f
+            var ticketOnSaleTime= new Date("January 13, 2015 13:00:00");
+            $('#buyNow .container').countdown({
+                until: ticketOnSaleTime,
+                description: "Tickets on sale",
+                expiryText: '<a href="https://phunconf5.eventbrite.com.au" target="_blank" class="button" style="display: none">Book&nbsp;now</a>',
+                onExpiry: function () {
+                    setTimeout(function() {
+                        $('#buyNow .container .button').fadeIn(2000);
+                    }, 300);
+
+                },
+                layout: '<span class="countdown-row countdown-descr">{desc}</span>' +
+                '<span class="countdown-row countdown-show4">' +
+                    '<span class="countdown-section">' +
+                        '<span class="countdown-amount">{dn}</span>' +
+                        '<span class="countdown-period">{dl}</span>' +
+                        '</span>' +
+
+                    '<span class="countdown-section">' +
+                        '<span class="countdown-amount">{hn}</span>' +
+                        '<span class="countdown-period">{hl}</span>' +
+                        '</span>' +
+                    '<span class="countdown-section">' +
+                        '<span class="countdown-amount">{mn}</span>' +
+                        '<span class="countdown-period">{ml}</span>' +
+                        '</span>' +
+                    '<span class="countdown-section">' +
+                        '<span class="countdown-amount">{sn}</span>' +
+                        '<span class="countdown-period">{sl}</span>' +
+                        '</span>' +
+                '</span>'
+
+            });
+            </script>
+
         </section>
     </div>
 </div>
