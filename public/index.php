@@ -35,7 +35,7 @@ $navigation = [
     'Home' => '',
     'What\'s On' => 'whats-on',
     'Schedule' => 'schedule',
-    '<strong>Tickets!</strong>' => (time() > strtotime('1:30pm 13 January 2015') ? null : 'tickets' ),
+    $ticketsLabel => 'tickets',
     'Code of Conduct' => 'code-of-conduct',
 ];
 
