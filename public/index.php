@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set ("Australia/Sydney");
+
 // http://gonzalo123.com/2012/10/15/how-to-rewrite-urls-with-php-5-4s-built-in-web-server/
 if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
     return false;
@@ -33,7 +35,7 @@ $navigation = [
     'Home' => '',
     'What\'s On' => 'whats-on',
     'Schedule' => 'schedule',
-    '<strong>Tickets!</strong>' => (time() > strtotime('1:30pm 13 January 2015') ? null : 'tickets' ),
+    $ticketsLabel => 'tickets',
     'Code of Conduct' => 'code-of-conduct',
 ];
 
