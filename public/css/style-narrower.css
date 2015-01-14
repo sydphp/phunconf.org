@@ -72,6 +72,14 @@ ul.staff img
     max-width: 600px !important;
 }
 
+/* Fixes a font positioning issue for tablets on the homepage banner (see #39) */
+@media (min-width:738px) {
+    #banner .phunconf_heading
+    {
+        line-height: 100px;
+    }
+}
+
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
