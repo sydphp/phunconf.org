@@ -1465,9 +1465,8 @@ body.codeOfConduct #intro
 .warning {
     border: 2px solid  #BC2818;
     padding: 10px;
-    marginL 10px;
+    margin: 10px;
 }
-
 
 
 @media (max-width:1720px) {
@@ -1508,4 +1507,16 @@ body.codeOfConduct #intro
         outline: 0;
         color: #FFF;
     }
+}
+
+
+.sponsor ul.featured li {
+    margin: 25px;
+    width: 190px;
+}
+.sponsor ul.featured li p {
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
