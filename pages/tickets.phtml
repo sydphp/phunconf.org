@@ -1,0 +1,93 @@
+<!-- Intro -->
+<div id="intro">
+    <div class="container">
+        <div class="row">
+            <section class="12u">
+                <header>
+                    <h1>Tickets</h1>
+                </header>
+
+                <p>
+                    To celebrate Phunconf's 5th birthday we are also including an optional day of workshops and a code retreat.
+                </p>
+
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="6u">
+                <div class="content">
+
+                    <header>
+                        <h3>Unconference</h3>
+                    </header>
+                    <p>
+                        The unconference will run as it has in previous years with a series of round circle discussions on topics of your choosing.
+                        Drinks and catering are of course provided along with prizes, courtesy of our generous sponsors!
+                    </p>
+
+                    <p>
+                        Unconference tickets are $12.50+ booking fee and will be available from 1:30pm on January 13th.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="6u">
+                <div class="content">
+                    <header>
+                        <h3>Workshops & Code Retreat</h3>
+                    </header>
+                    <p>
+                        Workshops run between 9am and 5pm on February 5th and are taught by experienced industry leaders.
+                        Attendance to workshops and the code retreat is limited for the benefit of those attending to ensure
+                        you have a more personalised experience.
+                    </p>
+
+                    <p>
+                        A workshop/code retreat <strong>includes</strong> an evening unconference ticket; you do not need two tickets to attend both events.
+                    </p>
+                </div>
+            </section>
+        </div>
+<?php if(TICKETS_ON_SALE) { ?>
+        <div class="row">
+            <section class="12u">
+                <!-- eventbrite embedded widget -->
+                <div style="width:100%; text-align:left;">
+                    <iframe src="//eventbrite.com.au/tickets-external?eid=14828894623&ref=etckt" frameborder="0"
+                             height="659" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5"
+                            scrolling="no" allowtransparency="true" id="eventbriteTickets"
+                            onLoad="resizeIframeHeight();"></iframe>
+                    <div
+                        style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;">
+                        <a style="color:#ddd; text-decoration:none;" target="_blank"
+                           href="http://www.eventbrite.com.au/r/etckt">Online Ticketing</a><span style="color:#ddd;"> for </span><a
+                            style="color:#ddd; text-decoration:none;" target="_blank"
+                            href="https://phunconf5.eventbrite.com.au/?ref=etckt">Phunconf 5.0</a> <span
+                            style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;"
+                                                                     target="_blank"
+                                                                     href="http://www.eventbrite.com.au?ref=etckt">Eventbrite</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+<?php }?>
+    </div>
+</div>
+
+<?php /* http://stackoverflow.com/questions/5867985/iframe-auto-100-height /*/ ?>
+<script type="text/javascript">
+    function resizeIframeHeight()
+    {
+        //find the height of the internal page
+        var the_height=
+            document.getElementById('eventbriteTickets').contentWindow.
+                document.body.scrollHeight;
+
+        //change the height of the iframe
+        document.getElementById('eventbriteTickets').height=
+            the_height;
+    }
+</script>

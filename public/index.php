@@ -1,4 +1,49 @@
-<!DOCTYPE HTML>
+<?php
+
+date_default_timezone_set ("Australia/Sydney");
+
+// http://gonzalo123.com/2012/10/15/how-to-rewrite-urls-with-php-5-4s-built-in-web-server/
+if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
+    return false;
+}
+
+$route = str_replace('?'.$_SERVER['QUERY_STRING'],'', $_SERVER['REQUEST_URI']);
+$route = str_replace($_SERVER['SCRIPT_NAME'], '', $route);
+
+define('DS', DIRECTORY_SEPARATOR);
+define('PAGES_DIR', '../pages');
+define('TICKETS_ON_SALE', array_key_exists('TICKETS', $_GET) || time() > strtotime('1:30pm 13 January 2015'));
+
+
+// Page Variables - these are overwritten in templates/pages.
+$bodyClass = '';
+
+$pageTemplate = PAGES_DIR.DS.$route.'.phtml';
+
+if( $route == '/') {
+    $pageTemplate = PAGES_DIR.DS.'index'.'.phtml';
+}
+
+if(!is_readable($pageTemplate)) {
+    $pageTemplate = PAGES_DIR.'/404.phtml';
+    http_response_code(404);
+}
+
+$ticketsLabel = (TICKETS_ON_SALE ? '<strong>Tickets!</strong>' : 'Tickets');
+
+$navigation = [
+    'Home' => '',
+    'What\'s On' => 'whats-on',
+    'Schedule' => 'schedule',
+    $ticketsLabel => 'tickets',
+    'Code of Conduct' => 'code-of-conduct',
+];
+
+ob_start();
+require $pageTemplate;
+$content = ob_get_clean();
+
+?><!DOCTYPE HTML>
 
 <html>
 <head>
@@ -20,9 +65,8 @@
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/style-wide.css" />
     </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
-<body class="homepage">
+<body class="<?=$bodyClass;?>">
 
 <!-- Header -->
 <div id="header">
@@ -30,16 +74,23 @@
 
         <!-- Logo -->
         <div id="logo">
-            <h1><span class="brand">Syd<span class="php">PHP</span></span> <a href="/" class=""><span class="phunconf">Phunconference</span> <span class="version">5.0</span></a></h1>
+            <h1>
+                <a href="/" class="">
+                    <span class="phunconf">phunconf</span> <span class="version">5.0</span>
+                </a>
+            </h1>
         </div>
 
         <!-- Nav -->
         <nav id="nav">
             <ul>
-                <li class="current_page_item"><a href="/">Home</a></li>
-                <li><a href="/sponsors.php">Sponsors</a></li>
-                <li><a href="/information/">Information</a></li>
-                <li><a href="/code-of-conduct/">Code of Conduct</a></li>
+                <?php
+                foreach($navigation as $name => $slug) {
+                    if(is_null($slug)) { continue; }
+                    $class = ('/'.$slug == $_SERVER['REQUEST_URI'] ? 'current_page_item' : '');
+                    ?><li class="<?=$class;?>"><a href="/<?=$slug;?>"><?=$name;?></a></li><?php
+                }
+                ?>
             </ul>
         </nav>
 
@@ -47,98 +98,7 @@
 </div>
 
 
-<!-- Banner -->
-
-<div id="banner">
-    <div class="container">
-        <section>
-            <header>
-                <h2>5th Feb 2015</h2>
-                <span class="byline">5th Annual <span class="brand" >Syd<span class="php">PHP</span></span> <span class="phunconf">Phunconference</span></span>
-            </header>
-            <a href="https://phunconf5.eventbrite.com.au" target="_blank" class="button">Book&nbsp;now</a>
-        </section>
-    </div>
-</div>
-
-<!-- Intro -->
-<div id="intro">
-    <div class="container">
-        <div class="row">
-
-            <section class="6u">
-                <header>
-                    <h2>Unconf</h2>
-                </header>
-                <div class="content">
-                    <p>
-                        A series of open circle discussions focusing on knowledge sharing and peer learning.  A wide range of topics are discussed and no unconf is ever the same.
-                    </p>
-                </div>
-                <header>
-                    <h2>Workshops</h2>
-                </header>
-                <div class="content">
-                    <p>
-                        Workshops sizes are limited for the benefit of those attending.  Sessions include PHP Security and Web Applications at Scale as well as a PHP Masterclass.
-                    </p>
-                </div>
-                <header>
-                    <h2>Code Retreat</h2>
-                </header>
-                <div class="content">
-                    <p>
-                        An opportunity for developers to hone their unit testing skills.  This is a unique and hands on pair programming experience.
-                    </p>
-                </div>
-            </section>
-
-            <section class="4u">
-
-                <span class="image">
-                    <img class="promo" src="img/phunconf4.0-group.jpg" alt="">
-                </span>
-
-                <span class="image">
-                    <img class="promo" src="img/phunconf4.0-circle.jpg" alt="">
-                </span>
-
-            </section>
-        </div>
-    </div>
-</div>
-
- <!-- Main -->
-            <div id="main">
-                <div class="container"><!-- Row #1 -->
-                    <!-- <div class="row"> -->
-                        <section>
-                            <h3>Phunconf is run for the benefit of the Sydney PHP community by SydPHP organisers:</h3>
-                            <ul class="featured">
-                                <li><p><a href="http://www.meetup.com/SydPHP/members/49626422/">Dave Clark</a></p>
-                                    <a href="http://www.meetup.com/SydPHP/members/49626422/">
-                                    <img class="team" src="/img/team/dave.jpg" alt="Dave Clark profile"/>
-                                    </a>
-                                </li>
-                                <li><p><a href="http://www.meetup.com/SydPHP/members/32702732/">Jack Skinner</a></p>
-                                    <a href="http://www.meetup.com/SydPHP/members/32702732/">
-                                    <img class="team" src="/img/team/jack.jpg" alt="Jack Skinner profile"/>
-                                </a></li>
-                                <li><p><a href="http://www.meetup.com/SydPHP/members/13462493/">Dean Rather</a></p>
-                                    <a href="http://www.meetup.com/SydPHP/members/13462493/">
-                                    <img class="team" src="/img/team/dean.jpg" alt="Dean Rather profile"/>
-                                </a></li>
-                                <li><p><a href="http://www.meetup.com/SydPHP/members/49008392/">Justin King</a></p>
-                                    <a href="http://www.meetup.com/SydPHP/members/49008392/">
-                                    <img class="team" src="/img/team/justin.jpg" alt="Justin King profile"/>
-                                </a>
-                                </li>
-                            </ul>
-                        <section>
-                   <!--  </div> -->
-                </div>
-            </div>
-
+<?= $content; ?>
 
 <!-- Footer -->
 <section id="footer">
@@ -158,6 +118,17 @@
 
     </div>
 </section>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58468722-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
