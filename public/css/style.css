@@ -1144,7 +1144,8 @@ table.default tbody
 {
     color: #ffcf06;
 }
-#intro header h1 {
+#intro header h1,
+section h1 {
     font-size: 2em;
 }
 #intro header h3 {
