@@ -37,6 +37,7 @@ $navigation = [
     'Schedule' => 'schedule',
     $ticketsLabel => 'tickets',
     'Code of Conduct' => 'code-of-conduct',
+    'Sponsors' => 'sponsors',
 ];
 
 ob_start();
