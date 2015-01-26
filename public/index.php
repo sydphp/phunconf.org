@@ -37,6 +37,7 @@ $navigation = [
     'Schedule' => 'schedule',
     $ticketsLabel => 'tickets',
     'Code of Conduct' => 'code-of-conduct',
+    'Sponsors' => 'sponsors',
 ];
 
 ob_start();
@@ -91,7 +92,6 @@ $content = ob_get_clean();
                     ?><li class="<?=$class;?>"><a href="/<?=$slug;?>"><?=$name;?></a></li><?php
                 }
                 ?>
-
             </ul>
         </nav>
 
