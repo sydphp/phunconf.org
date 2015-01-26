@@ -1547,3 +1547,34 @@ body.codeOfConduct #intro
     color: #5b6780 !important;
     border-color: white;
 }
+
+
+.sponsor.gold-sponsor ul.featured li {
+    height: 150px;
+    display: inline-block;
+}
+.sponsor.gold-sponsor ul.featured li,
+.sponsor.gold-sponsor ul.featured li p {
+    width: 320px;
+    max-width: 320px;
+}
+.sponsor.gold-sponsor ul.featured li div.sponsor-logo {
+    height: 105px;      /* equals max image height */
+    /*width: 160px;*/
+    border: none;
+    white-space: nowrap;
+
+    text-align: center; margin: 1em 0;
+}
+.sponsor.gold-sponsor img {
+    max-width: 300px;
+    vertical-align:middle;
+
+}
+
+.vertical-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
