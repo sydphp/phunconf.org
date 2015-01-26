@@ -1548,25 +1548,33 @@ body.codeOfConduct #intro
     border-color: white;
 }
 
-
-.sponsor.gold-sponsor ul.featured li {
+.sponsor.gold-sponsor ul.featured li,
+.sponsor.silver-sponsor ul.featured li,
+.sponsor.bronze-sponsor ul.featured li {
     height: 150px;
     display: inline-block;
 }
 .sponsor.gold-sponsor ul.featured li,
-.sponsor.gold-sponsor ul.featured li p {
+.sponsor.gold-sponsor ul.featured li p,
+.sponsor.silver-sponsor ul.featured li,
+.sponsor.silver-sponsor ul.featured li p,
+.sponsor.bronze-sponsor ul.featured li,
+.sponsor.bronze-sponsor ul.featured li p {
     width: 320px;
     max-width: 320px;
 }
-.sponsor.gold-sponsor ul.featured li div.sponsor-logo {
+.sponsor.gold-sponsor ul.featured li div.sponsor-logo,
+.sponsor.silver-sponsor ul.featured li div.sponsor-logo,
+.sponsor.bronze-sponsor ul.featured li div.sponsor-logo {
     height: 105px;      /* equals max image height */
-    /*width: 160px;*/
     border: none;
     white-space: nowrap;
 
     text-align: center; margin: 1em 0;
 }
-.sponsor.gold-sponsor img {
+.sponsor.gold-sponsor img,
+.sponsor.silver-sponsor img,
+.sponsor.bronze-sponsor img {
     max-width: 300px;
     vertical-align:middle;
 
