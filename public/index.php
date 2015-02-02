@@ -40,18 +40,20 @@ $navigation = [
     'Sponsors' => 'sponsors',
 ];
 
+$ogDescription = "Join us for the 5th Annual SydPHP Phunconference on 5th February 2015 with workshops, code retreat and our famous evening unconf!";
+
 $openGraph = [
     'og:title' => 'PHUNCONF 5.0',
     'og:type' => 'website',
-    'og:description' =>
-        "SydPHP is proud to annouce Phunconf 5.0!  To celebrate Phunconf's 5th birthday there is also a "
-        ."series of workshops and a code retreat available to attendees."
-        ."  Both workshops and code retreat run during the day on February 5th"
-        ." and tickets include entry to the evening unconference.",
-    'og:url' => 'http://phunconf.org/'.$route.'/',
+    'og:description' => $ogDescription,
+    'og:url' => 'http://phunconf.org'.($route?$route:''),
     'og:image' => ($_SERVER['HTTPS']?'https://':'http://').$_SERVER['HTTP_HOST'].'/img/phunconf_logo.png',
 ];
 
+    $metaTags = [
+        'keywords' => 'PHP, Phunconference, Sydney, Australia, SydPHP, Unconference, Workshops',
+        'description' => $openGraph['og:description'],
+    ];
 
 ob_start();
 require $pageTemplate;
@@ -65,8 +67,10 @@ $content = ob_get_clean();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home | SydPHP Phunconference</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Join us for the 5th Annual SydPHP Phunconference on 5th February 2015">
-    <meta name="keywords" content="PHP, Phunconference, Sydney, Australia, SydPHP, Unconference, Workshops" />
+    <?php foreach($metaTags as $metaName=>$metaContent) { ?>
+        <meta name="<?=$metaName;?>" content="<?=$metaContent;?>" />
+    <?php } ?>
+
     <link rel="canonical" href="http://phunconf.org/">
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <?php foreach($openGraph as $property=>$ogContent) { ?>
