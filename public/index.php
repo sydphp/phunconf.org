@@ -69,8 +69,8 @@ $content = ob_get_clean();
     <meta name="keywords" content="PHP, Phunconference, Sydney, Australia, SydPHP, Unconference, Workshops" />
     <link rel="canonical" href="http://phunconf.org/">
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <?php foreach($openGraph as $property=>$content) { ?>
-        <meta property="<?=$property;?>" content="<?=$content;?>" />
+    <?php foreach($openGraph as $property=>$ogContent) { ?>
+        <meta property="<?=$property;?>" content="<?=$ogContent;?>" />
     <?php } ?>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
