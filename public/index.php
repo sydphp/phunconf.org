@@ -40,6 +40,19 @@ $navigation = [
     'Sponsors' => 'sponsors',
 ];
 
+$openGraph = [
+    'og:title' => 'PHUNCONF 5.0',
+    'og:type' => 'website',
+    'og:description' =>
+        "SydPHP is proud to annouce Phunconf 5.0!  To celebrate Phunconf's 5th birthday there is also a "
+        ."series of workshops and a code retreat available to attendees."
+        ."  Both workshops and code retreat run during the day on February 5th"
+        ." and tickets include entry to the evening unconference.",
+    'og:url' => 'http://phunconf.org/'.$route.'/',
+    'og:image' => ($_SERVER['HTTPS']?'https://':'http://').$_SERVER['HTTP_HOST'].'/img/phunconf_logo.png',
+];
+
+
 ob_start();
 require $pageTemplate;
 $content = ob_get_clean();
@@ -56,6 +69,9 @@ $content = ob_get_clean();
     <meta name="keywords" content="PHP, Phunconference, Sydney, Australia, SydPHP, Unconference, Workshops" />
     <link rel="canonical" href="http://phunconf.org/">
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <?php foreach($openGraph as $property=>$ogContent) { ?>
+        <meta property="<?=$property;?>" content="<?=$ogContent;?>" />
+    <?php } ?>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
     <script src="/js/skel.min.js"></script>
