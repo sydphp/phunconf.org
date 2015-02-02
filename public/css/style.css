@@ -792,7 +792,8 @@ table.default tbody
 }
 
 #nav li.current_page_item > a,
-#nav li.current_page_item > span
+#nav li.current_page_item > span,
+#nav li:hover > a
 {
     background: #188BBC;
     color: #FFF;
@@ -870,6 +871,66 @@ table.default tbody
 {
 }
 
+
+/*********************************************************************************/
+/* Sponsors                                                                      */
+/*********************************************************************************/
+
+#sponsors
+{
+    position: relative;
+    padding: 2em 0 2em 0;
+    background: #fff;
+    opacity: 0.8;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+#sponsors:after
+{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.gold-sponsor
+{
+    position: relative;
+    padding: 1em 0 1em 0;
+    background: #ffcf06 !important;
+    opacity: 1;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.silver-sponsor
+{
+    position: relative;
+    padding: 1em 0 1em 0;
+    background: #fff9ea !important;
+    opacity: 1;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.bronze-sponsor
+{
+    position: relative;
+    padding: 1em 0 1em 0;
+    background: #ff9255 !important;
+    opacity: 1;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
@@ -908,6 +969,7 @@ table.default tbody
     font-size: 3.5em;
     font-weight: 400;
     color: #fff;
+    line-height: 1.2em;
 }
 
 #banner header .byline
@@ -1082,7 +1144,8 @@ table.default tbody
 {
     color: #ffcf06;
 }
-#intro header h1 {
+#intro header h1,
+section h1 {
     font-size: 2em;
 }
 #intro header h3 {
@@ -1404,9 +1467,8 @@ body.codeOfConduct #intro
 .warning {
     border: 2px solid  #BC2818;
     padding: 10px;
-    marginL 10px;
+    margin: 10px;
 }
-
 
 
 @media (max-width:1720px) {
@@ -1448,3 +1510,79 @@ body.codeOfConduct #intro
         color: #FFF;
     }
 }
+
+
+.sponsor ul.featured li {
+    margin: 25px;
+    width: 190px;
+}
+.sponsor ul.featured li p {
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+#sponsorNow {
+    width: 41em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sponsorNow .button
+{
+    position: relative;
+    z-index: 1;
+    background-color: #188BBC;
+    font-weight: 800;
+    color: #43485e !important;
+    font-size: 2.4em;
+    line-height: 1.2em;
+    border-color: #EFBD32;
+}
+
+#sponsorNow .button:hover {
+    background-color: rgba(255,207,6, 1);
+    color: #5b6780 !important;
+    border-color: white;
+}
+
+.sponsor.gold-sponsor ul.featured li,
+.sponsor.silver-sponsor ul.featured li,
+.sponsor.bronze-sponsor ul.featured li {
+    height: 150px;
+    display: inline-block;
+}
+.sponsor.gold-sponsor ul.featured li,
+.sponsor.gold-sponsor ul.featured li p,
+.sponsor.silver-sponsor ul.featured li,
+.sponsor.silver-sponsor ul.featured li p,
+.sponsor.bronze-sponsor ul.featured li,
+.sponsor.bronze-sponsor ul.featured li p {
+    width: 320px;
+    max-width: 320px;
+}
+.sponsor.gold-sponsor ul.featured li div.sponsor-logo,
+.sponsor.silver-sponsor ul.featured li div.sponsor-logo,
+.sponsor.bronze-sponsor ul.featured li div.sponsor-logo {
+    height: 105px;      /* equals max image height */
+    border: none;
+    white-space: nowrap;
+
+    text-align: center; margin: 1em 0;
+}
+.sponsor.gold-sponsor img,
+.sponsor.silver-sponsor img,
+.sponsor.bronze-sponsor img {
+    max-width: 300px;
+    vertical-align:middle;
+
+}
+
+.vertical-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
