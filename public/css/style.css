@@ -879,7 +879,7 @@ table.default tbody
 #sponsors
 {
     position: relative;
-    padding: 2em 0 2em 0;
+    padding: 0;
     background: #fff;
     opacity: 0.8;
     background-size: cover;
@@ -887,21 +887,23 @@ table.default tbody
     color: #fff;
 }
 
-#sponsors:after
-{
-    position: absolute;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+#sponsors a {
+    color: #247BA6;
+}
+
+
+#sponsors > div.sponsor > section > ul p {
+    margin-bottom: 0;
+}
+#sponsors > div.sponsor > section > ul > li > div {
+    margin-top: 0;
 }
 
 .gold-sponsor
 {
     position: relative;
     padding: 1em 0 1em 0;
+    margin-bottom: 1em;
     background: #ffcf06 !important;
     opacity: 1;
     background-size: cover;
@@ -913,6 +915,7 @@ table.default tbody
 {
     position: relative;
     padding: 1em 0 1em 0;
+    margin-bottom: 1em;
     background: #fff9ea !important;
     opacity: 1;
     background-size: cover;
@@ -929,6 +932,38 @@ table.default tbody
     background-size: cover;
     text-align: center;
     color: #fff;
+}
+
+.etabs { margin: 0; padding: 0; }
+.tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
+.tab a { font-size: 20px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
+.tab a:hover { text-decoration: underline; }
+.tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
+.tab a.active { font-weight: bold; }
+.tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+.panel-container { margin-bottom: 10px; min-height: 300px; }
+
+.panel-container ul.special-thanks, .panel-container ul.prize-sponsors {
+    list-style: circle;
+    color: #000;
+    margin-left: 2em;
+    line-height: 1.3em;
+}
+
+.panel-container ul.special-thanks li, .panel-container ul.prize-sponsors li {
+    display: inline-block;
+    text-align: center;
+}
+
+.panel-container ul.special-thanks li {
+    width: 30%;
+    margin-top: 45px;
+}
+
+.panel-container ul.prize-sponsors li {
+    width: 45%;
+    margin-top: 40px;
+    min-height: 175px;
 }
 
 /*********************************************************************************/
