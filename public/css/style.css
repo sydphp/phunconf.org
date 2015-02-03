@@ -1587,7 +1587,6 @@ body.codeOfConduct #intro
 .sponsor.silver-sponsor ul.featured li,
 .sponsor.bronze-sponsor ul.featured li {
     height: 150px;
-    display: inline-block;
 }
 .sponsor.gold-sponsor ul.featured li,
 .sponsor.gold-sponsor ul.featured li p,
@@ -1604,7 +1603,6 @@ body.codeOfConduct #intro
     height: 105px;      /* equals max image height */
     border: none;
     white-space: nowrap;
-
     text-align: center; margin: 1em 0;
 }
 .sponsor.gold-sponsor img,
