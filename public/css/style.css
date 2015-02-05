@@ -16,6 +16,10 @@
 
 }
 
+.clearfix {
+    clear: both;
+    float: none;
+}
 
 .brand {
     font-family: 'HandelGothicRegular';
@@ -934,6 +938,10 @@ table.default tbody
     color: #fff;
 }
 
+.sponsor-large {
+    min-height: 400px;
+}
+
 .etabs { margin: 0; padding: 0; }
 .tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
 .tab a { font-size: 20px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
@@ -964,6 +972,7 @@ table.default tbody
     width: 45%;
     margin-top: 40px;
     min-height: 175px;
+    float:left;
 }
 
 /*********************************************************************************/
@@ -1587,7 +1596,6 @@ body.codeOfConduct #intro
 .sponsor.silver-sponsor ul.featured li,
 .sponsor.bronze-sponsor ul.featured li {
     height: 150px;
-    display: inline-block;
 }
 .sponsor.gold-sponsor ul.featured li,
 .sponsor.gold-sponsor ul.featured li p,
@@ -1604,7 +1612,6 @@ body.codeOfConduct #intro
     height: 105px;      /* equals max image height */
     border: none;
     white-space: nowrap;
-
     text-align: center; margin: 1em 0;
 }
 .sponsor.gold-sponsor img,

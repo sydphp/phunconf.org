@@ -110,6 +110,22 @@
                             </ul>
                         </section>
                     </div>
+
+                    <div class="sponsor bronze-sponsor sponsor-large">
+                        <section>
+                            <ul class="featured">
+                                <li><p><a target="_blank" href="https://www.eventbrite.com/e/mastercard-masters-of-code-competition-sydney-australia-tickets-14360074369/">
+                                        MasterCard: Masters of Code Powered by AngelHack</a></p>
+                                    <div class="sponsor-logo">
+                                        <span class="vertical-helper"></span>
+                                        <a target="_blank" href="https://www.eventbrite.com/e/mastercard-masters-of-code-competition-sydney-australia-tickets-14360074369/">
+                                            <img class="team" src="/img/sponsors/angelhack.png" alt="MasterCard: Masters of Code Powered by AngelHack"/>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
                 <div id="special-thanks-tab">
                     <h2>
@@ -146,18 +162,24 @@
                     <ul class="prize-sponsors">
                         <?php
                         $prizeSponsors = array(
-                            'Zend' => ['logo' => 'zend_logo.jpg', 'url' => 'http://www.zend.com/'],
-                            'Pluralsight' => ['logo' => 'pluralsight-medium.png', 'url' => 'http://www.pluralsight.com/'],
-                            'JetBrains' => ['logo' => 'logo_jetbrains.png', 'url' => 'https://www.jetbrains.com/phpstorm/'],
+                            'Zend' =>
+                                ['logo' => 'zend_logo.jpg', 'url' => 'http://www.zend.com/'],
+                            'Pluralsight' =>
+                                ['logo' => 'pluralsight-medium.png', 'url' => 'http://www.pluralsight.com/'],
+                            'JetBrains' =>
+                                ['logo' => 'logo_jetbrains.png', 'url' => 'https://www.jetbrains.com/phpstorm/'],
+                            'MasterCard: Masters of Code Powered by AngelHack' =>
+                                ['logo' => 'angelhack.png', 'url' => 'https://www.eventbrite.com/e/mastercard-masters-of-code-competition-sydney-australia-tickets-14360074369/'],
                         );
                         foreach ($prizeSponsors as $name => $prizeData) : ?>
                             <li>
-                                <img src="/img/sponsors/<?=$prizeData['logo']?>" alt="<?=$name?>"/>
+                                <a href="<?=$prizeData['url']?>"><?=$name?></a>
                                 <br />
-                                <a href="<?=$prizeData['url']?>"><?=$prizeData['url']?></a>
+                                <img src="/img/sponsors/<?=$prizeData['logo']?>" alt="<?=$name?>"/>
                             </li>
                         <?php endforeach; ?>
                     </ul>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>
